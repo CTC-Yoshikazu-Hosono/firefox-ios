@@ -10,19 +10,6 @@ let website_2 = ["url": "www.yahoo.com", "label": "Yahoo", "value": "yahoo"]
 let urlAddOns = "addons.mozilla.org"
 
 class NavigationTest: BaseTestCase {
-    var navigator: Navigator!
-    var app: XCUIApplication!
-
-    override func setUp() {
-        super.setUp()
-        app = XCUIApplication()
-        navigator = createScreenGraph(app).navigator(self)
-    }
-
-    override func tearDown() {
-        super.tearDown()
-    }
-
     func testNavigation() {
         navigator.goto(URLBarOpen)
         let urlPlaceholder = "Search or enter address"

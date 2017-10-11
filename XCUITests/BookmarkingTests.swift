@@ -5,19 +5,6 @@
 import XCTest
 
 class BookmarkingTests: BaseTestCase {
-    var navigator: Navigator!
-    var app: XCUIApplication!
-
-    override func setUp() {
-        super.setUp()
-        app = XCUIApplication()
-        navigator = createScreenGraph(app).navigator(self)
-    }
-
-    override func tearDown() {
-        super.tearDown()
-    }
-
     private func bookmark() {
         navigator.goto(PageOptionsMenu)
         waitforExistence(app.tables.cells["Bookmark This Page"])
